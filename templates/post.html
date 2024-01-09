@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="container d-flex align-items-center justify-content-center vh-100">
+    <div class="text-center">
+        {% block title %}
+            <h1>Posts</h1>
+            <ul class="list-group">
+                {% for postagem in posts %}
+                    <li class="list-group-item">{{ postagem.user.nome }} - {{ postagem.post }}</li>
+                {% endfor %}
+            </ul>
+        {% endblock %}
+    </div>
+</div>
+
+{% endblock %}

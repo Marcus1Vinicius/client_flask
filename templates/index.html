@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="container d-flex align-items-center justify-content-center vh-100">
+    <div class="text-center">
+        {% block title %}
+            <h1>Bem vindo(a)</h1>
+            <nav class="nav">
+                <a class="nav-link" href="{{ url_for('users') }}">Usuários</a>
+                <a class="nav-link" href="{{ url_for('todos') }}">ToDos</a>
+                <a class="nav-link" href="{{ url_for('comments') }}">Comentários</a>
+                <a class="nav-link" href="{{ url_for('posts') }}">Posts</a>
+            </nav>
+        {% endblock %}
+    </div>
+</div>
+
+{% endblock %}
